@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 import com.study.spring.domain.Person;
 
 @Repository
-public interface PersonRepository extends CrudRepository<Person, Long>, PersonRepositoryExtend {
+public interface PersonRepository extends CrudRepository<Person, Long>, PersonRepositoryExtend , CustomizedPersonRepository{
 	List<Person> findByLastName(String lastName);
 	Page<Person> findByLastName(String lastname, Pageable pageable);
 	List<Person> findByLastName(String lastname, Sort sort);

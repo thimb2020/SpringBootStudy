@@ -68,6 +68,12 @@ public class PersonRepositoryTest {
 		List<Person> persons = personRepository.findTop4ByLastName("Thi");
 		assertTrue(persons.size() ==4);
 	}	
+	
+	@Test
+	public void findByLastNameCustomTest() {
+		List<Person> persons = personRepository.findByLastNameCustom("Thi");
+		assertTrue(persons.size() ==1);
+	}	
 
 	private Person createPerson() {
 		Person person = new Person();
