@@ -15,5 +15,6 @@ public interface PersonRepository extends CrudRepository<Person, Long>, PersonRe
 	List<Person> findByLastName(String lastName);
 	Page<Person> findByLastName(String lastname, Pageable pageable);
 	List<Person> findByLastName(String lastname, Sort sort);
+	List<Person> findTop4ByLastName(String lastname);
 
 }

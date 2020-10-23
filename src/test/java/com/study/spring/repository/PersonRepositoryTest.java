@@ -61,6 +61,13 @@ public class PersonRepositoryTest {
 		List<Person> personsPageable = personRepository.findByLastName("Thi", sort);
 		assertTrue(personsPageable.get(0).getFirstName().equals("Mai9"));
 	}
+	
+	@Test
+	public void findByTop4FirstNameTest() {
+		savePersons();
+		List<Person> persons = personRepository.findTop4ByLastName("Thi");
+		assertTrue(persons.size() ==4);
+	}	
 
 	private Person createPerson() {
 		Person person = new Person();
