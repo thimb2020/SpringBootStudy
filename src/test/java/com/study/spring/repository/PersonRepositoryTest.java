@@ -17,18 +17,32 @@ public class PersonRepositoryTest {
 	private PersonRepository personRepository;
 	@Test
 	public void saveTest() {
-		Person person = new Person();
-		person.setLastName("Thi");
+		Person person = createPerson();
 		person = personRepository.save(person);
 		assertTrue(person.getId()>0);
 	}
 	@Test
 	public void findByLastNameTest() {
-		Person person = new Person();
-		person.setLastName("Thi");
+		Person person = createPerson();
 		person = personRepository.save(person);
-		List<Person> persons = personRepository.findByLastName("abc");
-		assertTrue(persons.size()==1);
+		List<Person> persons = personRepository.findByLastName("Thi");
+		assertTrue(persons.size()>0);
+	}
+	
+	@Test
+	public void findByFirstNameTest() {
+		Person person = createPerson();
+		person = personRepository.save(person);
+		List<Person> persons = personRepository.findByFirstName("Mai");
+		assertTrue(persons.size()>0);
+	}	
+	
+	private Person createPerson() {
+		Person person = new Person();
+		person.setFirstName("Mai");
+		person.setLastName("Thi");
+		return person;
+		
 	}
 	
 }

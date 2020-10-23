@@ -15,6 +15,8 @@ public class Person {
 	private Long id;
 	@Column(nullable = false, length = 200)
 	private String lastName;
+	@Column(nullable = false, length = 200)
+	private String firstName;
 
 	public Long getId() {
 		return id;
@@ -32,4 +34,13 @@ public class Person {
 		this.lastName = lastName;
 	}
 
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+		
 }
