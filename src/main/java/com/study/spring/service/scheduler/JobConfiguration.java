@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 
 import com.study.spring.utils.CommonUtils;
 
-@Configuration
+//@Configuration
 public class JobConfiguration {
 
 	@Bean
