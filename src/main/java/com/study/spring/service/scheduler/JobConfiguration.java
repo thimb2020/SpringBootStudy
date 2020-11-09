@@ -8,8 +8,6 @@ import org.quartz.Trigger;
 import org.quartz.TriggerBuilder;
 import org.quartz.TriggerKey;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-
 import com.study.spring.utils.CommonUtils;
 
 //@Configuration

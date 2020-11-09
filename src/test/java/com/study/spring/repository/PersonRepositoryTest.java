@@ -71,7 +71,7 @@ public class PersonRepositoryTest {
 	
 	@Test
 	public void findByLastNameCustomTest() {
-		List<Person> persons = personRepository.findByLastNameCustom("Thi");
+		List<Person> persons = personRepository.searchByLastNameCustom("Thi");
 		assertTrue(persons.size() ==1);
 	}	
 

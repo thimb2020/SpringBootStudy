@@ -5,5 +5,5 @@ import java.util.List;
 import com.study.spring.domain.Person;
 
 public interface CustomizedPersonRepository {
-	List<Person> findByLastNameCustom(String lastName);
+	List<Person> searchByLastNameCustom(String lastName);
 }

@@ -8,7 +8,7 @@ import com.study.spring.domain.Person;
 public class CustomizedPersonRepositoryImpl implements CustomizedPersonRepository {
 
 	@Override
-	public List<Person> findByLastNameCustom(String lastName) {
+	public List<Person> searchByLastNameCustom(String lastName) {
 		List<Person> persons = new ArrayList<Person>();
 		persons.add(createPerson());
 		return persons;
