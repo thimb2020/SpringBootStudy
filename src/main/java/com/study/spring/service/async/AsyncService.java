@@ -25,7 +25,7 @@ public class AsyncService {
 		System.out.println("Execute method asynchronously. " + Thread.currentThread().getName());
 	}
 
-	@Async("threadPoolTaskExecutor")
+	@Async
 	public CompletableFuture<User> findUser(String user) throws InterruptedException {
 		logger.info("Looking up " + user);
 		String url = String.format("https://api.github.com/users/%s", user);

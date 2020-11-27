@@ -74,6 +74,11 @@ public class PersonRepositoryTest {
 		List<Person> persons = personRepository.searchByLastNameCustom("Thi");
 		assertTrue(persons.size() ==1);
 	}	
+	
+	@Test
+	public void deleteByLastNameCustomTest() {
+		personRepository.deleteById(200000L);
+	}	
 
 	private Person createPerson() {
 		Person person = new Person();

@@ -7,7 +7,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class PrintRandomService {
 
-    public void printRandom() {
+    
+	public void printRandom() {
         System.out.println(ThreadLocalRandom.current().nextInt());
     }
 }
